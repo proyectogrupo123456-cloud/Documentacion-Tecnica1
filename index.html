@@ -446,6 +446,7 @@ a:hover { color: var(--dorado); }
 .est-sub{padding:10px 16px 6px;font-weight:700;font-size:12.5px;color:var(--verde)}
 .est-total{display:flex;justify-content:space-between;padding:12px 16px;background:var(--verde);color:#fff;font-weight:800;font-size:15px}
 .est-total span:last-child{color:var(--dorado)}
+.est-sheet td:last-child,.est-sheet th:last-child{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -555,7 +556,7 @@ a:hover { color: var(--dorado); }
             <td>1.5</td><td>10/2026</td><td>Laborde Santiago</td><td>Actualización integral según el sistema entregado a la Comisión para la etapa de carga y prueba. Nuevos módulos: permisos por módulo y administradores, categorías de socios, exportación a Excel, recordatorio automático de cuota, consultas como conversación, asistencia a eventos por QR, encuestas anónimas, datos del club editables (contacto, actividades, formas de pago, cargos), pantalla de la Comisión automática y limpieza de datos de prueba. "Finanzas" pasa a llamarse "Ingreso cuotas". Integración con Mercado Pago (Checkout Pro) implementada. QR del carnet firmado por el servidor y carnet descargable sin estado de cuota. Envío de mails desactivado en esta etapa. Modelo de datos ampliado de 17 a 26 tablas. Nuevos requerimientos RF-23 a RF-33. Actualización de la guía de inicio rápido, el manual de uso y las preguntas frecuentes.</td></tr>
           <tr><td>1.5.1</td><td>10/2026</td><td>Equipo de desarrollo con la Comisión Directiva</td><td>Devolución del Alfa (entregado el 17/9/2026, devolución el 20/10/2026). Cambios incorporados a pedido de la Comisión: listado de socios con desplazamiento completo, datos del club editables desde la app (contacto, actividades, formas de pago y cargos), actividades en texto libre, textos institucionales fijos, botones con mejor contraste, pantalla de la Comisión actualizada automáticamente y envío de mails desactivado hasta definir la casilla del club.</td></tr>
           <tr>
-            <td>1.6</td><td>10/2026</td><td>Laborde Santiago</td><td>Corrección de la forma de pago: la seña de $ 555.000 se descuenta completa del total, saldo de $ 1.295.000 (2.6, 7.3 y 8.4). Sección 5 reestructurada según el modelo de la cátedra: GANTT por etapas con horas completadas según la planilla (84 h al 28/10/2026) y Carta Gantt embebida en vivo en modo solo lectura (5.1). Planilla de estimación (7.1.1) actualizada con los valores vigentes, en lugar de la captura con errores e infraestructura administrativa con roles, equipo y herramientas (5.2). Correspondencia entre las etapas del Gantt y las del resumen ejecutivo. Reprogramación de la entrega definitiva de septiembre de 2026 al 2 de noviembre de 2026; la garantía corre desde la firma del acta de entrega definitiva (8.3 y 8.8). Diagnóstico completo: problema central, causas, efectos, objetivo, fines y trazabilidad medio → requerimientos. RF-19 reclasificado a prioridad Media por depender del envío de mails y contar con procedimiento alternativo. Nombre "Ingreso cuotas" aplicado en todo el documento y destinos de comunicados alineados con el sistema (sin destino "Comisión"; los socios escriben a la Comisión por Consultas). Modelo ER completado: <code>cuotas.registrado_por</code>, relaciones de quién registra cobros y reservas, relación lógica <code>espacios_reserva</code> → <code>reservas</code> y <code>reservas</code> → <code>mp_pagos</code>, y excepciones a la 1FN y 3FN documentadas. Equipamiento e insumos de 6.2 y 6.3 aclarados como opcionales y fuera del precio. Corrección de la descripción del token de sesión (con estado, validado contra <code>sesiones</code>). Numeración: el Diagnóstico pasa a 2.7 y la imagen 7.1.1 se ubica después de 7.1. El manual de uso y las preguntas frecuentes pasan a un documento aparte (ver 2.5). Incorporación de los OKR con su base (2.6), de las validaciones con el cliente (sección 1), del control de versiones en GitHub (4.5 y 8.6) y del valor hora por categoría profesional (7.2).</td>
+            <td>1.6</td><td>10/2026</td><td>Laborde Santiago</td><td>Estimación económica actualizada según la planilla del equipo: 473 horas, costo de US$ 9.862,52, margen del 25 % y precio de venta de US$ 12.328,15, con seña del 30 % y saldo contra entrega (2.6, 7 y 8.4). Sección 5 reestructurada según el modelo de la cátedra: GANTT por etapas con horas completadas según la planilla (84 h al 28/10/2026) y Carta Gantt embebida en vivo en modo solo lectura (5.1). Planilla de estimación (7.1.1) actualizada con los valores vigentes, en lugar de la captura con errores e infraestructura administrativa con roles, equipo y herramientas (5.2). Correspondencia entre las etapas del Gantt y las del resumen ejecutivo. Reprogramación de la entrega definitiva de septiembre de 2026 al 2 de noviembre de 2026; la garantía corre desde la firma del acta de entrega definitiva (8.3 y 8.8). Diagnóstico completo: problema central, causas, efectos, objetivo, fines y trazabilidad medio → requerimientos. RF-19 reclasificado a prioridad Media por depender del envío de mails y contar con procedimiento alternativo. Nombre "Ingreso cuotas" aplicado en todo el documento y destinos de comunicados alineados con el sistema (sin destino "Comisión"; los socios escriben a la Comisión por Consultas). Modelo ER completado: <code>cuotas.registrado_por</code>, relaciones de quién registra cobros y reservas, relación lógica <code>espacios_reserva</code> → <code>reservas</code> y <code>reservas</code> → <code>mp_pagos</code>, y excepciones a la 1FN y 3FN documentadas. Equipamiento e insumos de 6.2 y 6.3 aclarados como opcionales y fuera del precio. Corrección de la descripción del token de sesión (con estado, validado contra <code>sesiones</code>). Numeración: el Diagnóstico pasa a 2.7 y la imagen 7.1.1 se ubica después de 7.1. El manual de uso y las preguntas frecuentes pasan a un documento aparte (ver 2.5). Incorporación de los OKR con su base (2.6), de las validaciones con el cliente (sección 1), del control de versiones en GitHub (4.5 y 8.6) y del valor hora por categoría profesional (7.2).</td>
           </tr>
         </tbody>
       </table>
@@ -811,11 +812,9 @@ a:hover { color: var(--dorado); }
       <table>
         <thead><tr><th>Concepto</th><th>Importe</th></tr></thead>
         <tbody>
-          <tr><td>Total acordado (desarrollo $ 1.700.000 + plataformas $ 150.000)</td><td><strong>$ 1.850.000</strong></td></tr>
-          <tr><td>Seña abonada (30 %), que se descuenta completa del total</td><td>− $ 555.000</td></tr>
-          <tr><td style="padding-left:28px;color:var(--gris-sub)">· aplicada a gastos de plataformas</td><td style="color:var(--gris-sub)">$ 150.000</td></tr>
-          <tr><td style="padding-left:28px;color:var(--gris-sub)">· aplicada a desarrollo</td><td style="color:var(--gris-sub)">$ 405.000</td></tr>
-          <tr><td><strong>Saldo contra entrega definitiva</strong></td><td><strong>$ 1.295.000</strong></td></tr>
+          <tr><td>Precio de venta (costo US$ 9.862,52 + margen del 25 %)</td><td><strong>US$ 12.328,15</strong></td></tr>
+          <tr><td>Seña (30 %)</td><td>US$ 3.698,45</td></tr>
+          <tr><td><strong>Saldo contra entrega definitiva (70 %)</strong></td><td><strong>US$ 8.629,70</strong></td></tr>
         </tbody>
       </table>
     </div>
@@ -1261,7 +1260,7 @@ a:hover { color: var(--dorado); }
     <h2 class="sec-titulo"><span class="num">5</span>Oferta de Gestión</h2>
 
     <h3 class="sub-titulo" id="s5-1">5.1 GANTT</h3>
-    <p>Cronograma de tareas, responsables y duración estimada, organizado por las etapas del proyecto (E01 a E03). El GANTT se lleva en una planilla de cálculo (Google Sheets) y se actualiza a medida que avanza el proyecto. El proyecto comenzó el 20 de abril de 2026; la entrega definitiva y el cierre formal son el <strong>2 de noviembre de 2026</strong>. Al 28 de octubre la planilla registra <strong>84 horas completadas</strong>. Las 346 horas de la sección 7 son la estimación con la que se fijó el precio.</p>
+    <p>Cronograma de tareas, responsables y duración estimada, organizado por las etapas del proyecto (E01 a E03). El GANTT se lleva en una planilla de cálculo (Google Sheets) y se actualiza a medida que avanza el proyecto. El proyecto comenzó el 20 de abril de 2026; la entrega definitiva y el cierre formal son el <strong>2 de noviembre de 2026</strong>. Al 28 de octubre la planilla registra <strong>84 horas completadas</strong>. Las 473 horas de la sección 7 son la estimación de esfuerzo con la que se fijó el precio.</p>
     <div class="tabla-wrap">
       <table>
         <thead><tr><th>Etapa</th><th>Tareas principales</th><th>Entregable</th><th>Hs completadas</th></tr></thead>
@@ -1347,7 +1346,7 @@ a:hover { color: var(--dorado); }
       </table>
     </div>
 
-    <div class="nota"><strong>Alcance de esta sección:</strong> los proveedores y precios de 6.1 a 6.3 son una referencia para el club. La sección 7 incluye sólo el alojamiento, el dominio y los servicios del período de desarrollo ($ 150.000). La compra de equipos (6.2), las credenciales impresas y la papelería (6.3) son opcionales, quedan a cargo del club si decide hacerlas y no forman parte del precio ni del contrato.</div>
+    <div class="nota"><strong>Alcance de esta sección:</strong> los proveedores y precios de 6.1 a 6.3 son una referencia para el club. Sus importes están en pesos argentinos y no forman parte del precio del proyecto (sección 7). La compra de equipos (6.2), las credenciales impresas y la papelería (6.3) son opcionales, quedan a cargo del club si decide hacerlas y no forman parte del precio ni del contrato.</div>
 
     <h3 class="sub-titulo">6.2 Proveedores de equipamiento informático (opcional)</h3>
     <div class="tabla-wrap">
@@ -1386,68 +1385,73 @@ a:hover { color: var(--dorado); }
       <table>
         <thead><tr><th>Concepto</th><th>Detalle</th><th>Importe</th></tr></thead>
         <tbody>
-          <tr><td>Desarrollo</td><td>346 horas de trabajo del equipo.</td><td>$ 1.700.000</td></tr>
-          <tr><td>Plataformas y herramientas</td><td>Alojamiento, dominio y servicios del período de desarrollo.</td><td>$ 150.000</td></tr>
-          <tr><td><strong>Total del proyecto</strong></td><td></td><td><strong>$ 1.850.000</strong></td></tr>
+          <tr><td>Costos de personal</td><td>473 horas de trabajo del equipo, con 5 % de contingencia (detalle en 7.2).</td><td>US$ 9.700,95</td></tr>
+          <tr><td>Costos varios</td><td>Herramienta de IA y entrega de productos, con 7 % de contingencia.</td><td>US$ 161,57</td></tr>
+          <tr><td><strong>Costo total</strong></td><td></td><td><strong>US$ 9.862,52</strong></td></tr>
+          <tr><td>Margen</td><td>25 % sobre el costo total.</td><td>US$ 2.465,63</td></tr>
+          <tr><td><strong>Precio de venta</strong></td><td></td><td><strong>US$ 12.328,15</strong></td></tr>
         </tbody>
       </table>
     </div>
-    <p>El valor hora promedio resultante es de <strong>$ 4.913</strong> ($ 1.700.000 / 346 horas). El valor hora de cada categoría profesional se detalla en 7.2.</p>
+    <p>Todos los importes de esta sección están expresados en dólares estadounidenses (US$). El costo promedio de la hora de trabajo es de <strong>US$ 20,51</strong> (US$ 9.700,95 / 473 horas) y el precio de venta equivale a <strong>US$ 26,06</strong> por hora. El costo de cada categoría profesional se detalla en 7.2.</p>
 
     <h3 class="sub-titulo">7.1.1 Planilla de estimación — situación actual</h3>
-    <p>Resumen de la planilla de estimación económica del equipo con los valores vigentes del proyecto (octubre de 2026).</p>
+    <p>Planilla de estimación económica del equipo con los valores vigentes del proyecto (octubre de 2026). El precio de venta surge de aplicar el margen del 25 % al costo total.</p>
     <div class="est-sheet">
       <div class="est-head"><span>Estimación económica</span><span>Sistema de Gestión Digital de Socios</span></div>
       <div class="est-meta">
         <div><b>Cliente</b>Centro Molisano Monforte</div>
-        <div><b>Director</b>Laborde Santiago</div>
+        <div><b>Director</b>Claudio Patriarca</div>
         <div><b>Fecha de inicio</b>20/04/2026</div>
         <div><b>Fecha de fin</b>02/11/2026</div>
-        <div><b>Precio de venta</b>$ 1.850.000</div>
-        <div><b>Esfuerzo</b>346 horas de desarrollo</div>
+        <div><b>Precio de venta</b>US$ 12.328,15</div>
+        <div><b>Esfuerzo</b>473 horas</div>
+        <div><b>Margen</b>25 %</div>
       </div>
       <div class="est-sec">1. Estimación de costos y gastos</div>
       <div class="est-sub">1.A Costos de personal</div>
       <div class="tabla-wrap" style="margin:0">
       <table>
-        <thead><tr><th>Categoría</th><th>Horas totales</th><th>Costo/hora</th><th>Costo</th></tr></thead>
+        <thead><tr><th>Categoría</th><th>Horas totales</th><th>Costo/hora</th><th>Coeficiente</th><th>Contingencia</th><th>Costo</th></tr></thead>
         <tbody>
-          <tr><td>Project manager y documentación</td><td>38,4</td><td>$ 4.500</td><td>$ 172.800</td></tr>
-          <tr><td>Administrador de base de datos</td><td>28,4</td><td>$ 5.100</td><td>$ 144.840</td></tr>
-          <tr><td>Desarrollador backend</td><td>143,1</td><td>$ 5.100</td><td>$ 729.810</td></tr>
-          <tr><td>Desarrollador frontend (dos integrantes)</td><td>136,1</td><td>$ 4.800</td><td>$ 653.280</td></tr>
-          <tr><td>Redondeo comercial</td><td></td><td></td><td>− $ 730</td></tr>
-          <tr><td><strong>Subtotal personal</strong></td><td><strong>346,0</strong></td><td>$ 4.913 promedio</td><td><strong>$ 1.700.000</strong></td></tr>
+          <tr><td>Project Manager</td><td>87</td><td>US$ 20,00</td><td>1</td><td>5 %</td><td>US$ 1.827,00</td></tr>
+          <tr><td>Administrador de BD</td><td>62</td><td>US$ 24,00</td><td>1</td><td>5 %</td><td>US$ 1.562,40</td></tr>
+          <tr><td>Desarrollador 01 — Back End</td><td>109</td><td>US$ 24,00</td><td>1</td><td>5 %</td><td>US$ 2.746,80</td></tr>
+          <tr><td>Desarrollador 02 — Front / Back</td><td>85</td><td>US$ 17,00</td><td>1</td><td>5 %</td><td>US$ 1.517,25</td></tr>
+          <tr><td>Desarrollador 03 — Front End</td><td>97</td><td>US$ 15,00</td><td>1</td><td>5 %</td><td>US$ 1.527,75</td></tr>
+          <tr><td>Diseñador UX/UI</td><td>33</td><td>US$ 15,00</td><td>1</td><td>5 %</td><td>US$ 519,75</td></tr>
+          <tr><td><strong>Subtotal</strong></td><td><strong>473</strong></td><td></td><td></td><td></td><td><strong>US$ 9.700,95</strong></td></tr>
         </tbody>
       </table>
       </div>
       <div class="est-sub">1.B Costos varios</div>
       <div class="tabla-wrap" style="margin:0">
       <table>
-        <thead><tr><th>Concepto</th><th>Detalle</th><th>Costo</th></tr></thead>
+        <thead><tr><th>Concepto</th><th>Costo</th><th>Cantidad</th><th>Contingencia</th><th>Total</th></tr></thead>
         <tbody>
-          <tr><td>Plataformas y herramientas</td><td>Alojamiento, dominio y servicios del período de desarrollo.</td><td>$ 150.000</td></tr>
-          <tr><td><strong>Subtotal varios</strong></td><td></td><td><strong>$ 150.000</strong></td></tr>
+          <tr><td>Herramienta de IA</td><td>US$ 140,00</td><td>1 unidad</td><td>7 %</td><td>US$ 149,80</td></tr>
+          <tr><td>Entrega de productos</td><td>US$ 11,00</td><td>1 unidad</td><td>7 %</td><td>US$ 11,77</td></tr>
+          <tr><td><strong>Subtotal</strong></td><td></td><td></td><td></td><td><strong>US$ 161,57</strong></td></tr>
         </tbody>
       </table>
       </div>
-      <div class="est-total"><span>Total</span><span>$ 1.850.000</span></div>
+      <div class="est-total"><span>Total (costo)</span><span>US$ 9.862,52</span></div>
     </div>
     <p class="figcap" style="margin-top:6px">Figura 3. Planilla de estimación económica con los valores actuales del proyecto · <a href="https://docs.google.com/spreadsheets/d/1m_GkrCjzrOilhucru2_XwC5Kaw4hxXMcNb5yA7AIhNc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="color:var(--verde-mid)">Ver la planilla en Google Sheets →</a></p>
 
     <h3 class="sub-titulo">7.2 Horas hombre por categoría profesional</h3>
-    <p>El valor hora se diferencia por categoría profesional. Las proporciones entre categorías siguen las de la planilla de estimación del equipo: backend y base de datos en el nivel más alto, frontend en el intermedio y dirección en el inicial.</p>
+    <p>El costo por hora se diferencia por categoría profesional, según la planilla de estimación (7.1.1). A cada costo se le suma una contingencia del 5 %.</p>
     <div class="tabla-wrap">
       <table>
-        <thead><tr><th>Categoría profesional</th><th>Integrante/s</th><th>Horas</th><th>Valor hora</th><th>Importe</th></tr></thead>
+        <thead><tr><th>Categoría profesional</th><th>Horas</th><th>Costo/hora</th><th>Costo con contingencia</th></tr></thead>
         <tbody>
-          <tr><td>Desarrollador backend</td><td>Carmele Felipe</td><td>143,1</td><td>$ 5.100</td><td>$ 729.810</td></tr>
-          <tr><td>Administrador de base de datos</td><td>Alonso Lautaro</td><td>28,4</td><td>$ 5.100</td><td>$ 144.840</td></tr>
-          <tr><td>Desarrollador frontend</td><td>Blas Damario (102,6 h) y Alonso Joaquín (33,5 h)</td><td>136,1</td><td>$ 4.800</td><td>$ 653.280</td></tr>
-          <tr><td>Project manager y documentación</td><td>Laborde Santiago</td><td>38,4</td><td>$ 4.500</td><td>$ 172.800</td></tr>
-          <tr><td>Subtotal</td><td></td><td>346,0</td><td></td><td>$ 1.700.730</td></tr>
-          <tr><td>Redondeo comercial</td><td></td><td></td><td></td><td>− $ 730</td></tr>
-          <tr><td><strong>Total desarrollo</strong></td><td></td><td><strong>346,0</strong></td><td>$ 4.913 promedio</td><td><strong>$ 1.700.000</strong></td></tr>
+          <tr><td>Project Manager</td><td>87</td><td>US$ 20,00</td><td>US$ 1.827,00</td></tr>
+          <tr><td>Administrador de base de datos</td><td>62</td><td>US$ 24,00</td><td>US$ 1.562,40</td></tr>
+          <tr><td>Desarrollador Back End</td><td>109</td><td>US$ 24,00</td><td>US$ 2.746,80</td></tr>
+          <tr><td>Desarrollador Front / Back</td><td>85</td><td>US$ 17,00</td><td>US$ 1.517,25</td></tr>
+          <tr><td>Desarrollador Front End</td><td>97</td><td>US$ 15,00</td><td>US$ 1.527,75</td></tr>
+          <tr><td>Diseñador UX/UI</td><td>33</td><td>US$ 15,00</td><td>US$ 519,75</td></tr>
+          <tr><td><strong>Total personal</strong></td><td><strong>473</strong></td><td>US$ 20,51 promedio</td><td><strong>US$ 9.700,95</strong></td></tr>
         </tbody>
       </table>
     </div>
@@ -1457,16 +1461,15 @@ a:hover { color: var(--dorado); }
       <table>
         <thead><tr><th>Concepto</th><th>Importe</th></tr></thead>
         <tbody>
-          <tr><td>Total acordado (desarrollo $ 1.700.000 + plataformas $ 150.000)</td><td><strong>$ 1.850.000</strong></td></tr>
-          <tr><td>Seña abonada (30 %), que se descuenta completa del total</td><td>− $ 555.000</td></tr>
-          <tr><td style="padding-left:28px;color:var(--gris-sub)">· aplicada a gastos de plataformas</td><td style="color:var(--gris-sub)">$ 150.000</td></tr>
-          <tr><td style="padding-left:28px;color:var(--gris-sub)">· aplicada a desarrollo</td><td style="color:var(--gris-sub)">$ 405.000</td></tr>
-          <tr><td><strong>Saldo contra entrega definitiva</strong></td><td><strong>$ 1.295.000</strong></td></tr>
+          <tr><td>Precio de venta (costo US$ 9.862,52 + margen del 25 %)</td><td><strong>US$ 12.328,15</strong></td></tr>
+          <tr><td>Seña (30 %)</td><td>US$ 3.698,45</td></tr>
+          <tr><td><strong>Saldo contra entrega definitiva (70 %)</strong></td><td><strong>US$ 8.629,70</strong></td></tr>
         </tbody>
       </table>
     </div>
 
     <h3 class="sub-titulo">7.4 Costos de operación posteriores</h3>
+    <p>Costos a cargo del club una vez entregado el sistema, en pesos argentinos.</p>
     <div class="tabla-wrap">
       <table>
         <thead><tr><th>Concepto</th><th>Periodicidad</th><th>Importe estimado</th></tr></thead>
@@ -1494,7 +1497,7 @@ a:hover { color: var(--dorado); }
     <p>Las etapas 01 y 02 de la Carta Gantt están concluidas. La etapa 03 (Proyecto Alfa) está en devolución y correcciones, con el sistema en funcionamiento en etapa de carga y prueba por parte de la Comisión Directiva. La entrega definitiva, prevista originalmente para septiembre de 2026, se reprograma para el <strong>2 de noviembre de 2026</strong>, fecha que coincide con el cierre formal del proyecto. La entrega definitiva se formaliza con la firma de un acta de entrega entre las partes.</p>
 
     <h3 class="sub-titulo">8.4 Precio y forma de pago</h3>
-    <p>El precio total asciende a <strong>un millón ochocientos cincuenta mil pesos</strong>, pagadero según lo establecido en el apartado 7.3: una seña de $ 555.000, ya abonada, y un saldo de <strong>$ 1.295.000</strong> contra la firma del acta de entrega definitiva. La mora en el pago del saldo faculta al Proveedor a suspender las tareas de mantenimiento hasta su regularización.</p>
+    <p>El precio total asciende a <strong>doce mil trescientos veintiocho dólares estadounidenses con quince centavos (US$ 12.328,15)</strong>, pagadero según lo establecido en el apartado 7.3: una seña del 30 % (US$ 3.698,45) y un saldo de <strong>US$ 8.629,70</strong> contra la firma del acta de entrega definitiva. La mora en el pago del saldo faculta al Proveedor a suspender las tareas de mantenimiento hasta su regularización.</p>
 
     <h3 class="sub-titulo">8.5 Obligaciones del Comitente</h3>
     <ul>

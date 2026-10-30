@@ -447,6 +447,7 @@ a:hover { color: var(--dorado); }
 .est-total{display:flex;justify-content:space-between;padding:12px 16px;background:var(--verde);color:#fff;font-weight:800;font-size:15px}
 .est-total span:last-child{color:var(--dorado)}
 .est-sheet td:last-child,.est-sheet th:last-child{white-space:nowrap}
+#s7 td:last-child{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -543,7 +544,7 @@ a:hover { color: var(--dorado); }
         <thead><tr><th>Versión</th><th>Fecha</th><th>Autor</th><th>Descripción del cambio</th></tr></thead>
         <tbody>
           <tr><td>0.1</td><td>05/2026</td><td>Laborde Santiago (PM) con la Comisión Directiva</td><td>Validación del relevamiento: dos entrevistas con la Comisión (24/4 y 30/4/2026). La idea del proyecto se ajustó a los resultados y se presentó el 8/5/2026.</td></tr>
-          <tr><td>0.2</td><td>07/2026</td><td>Equipo de desarrollo con la Comisión Directiva</td><td>Validación del mockup: entrevista inicial (16/6), mockup v1 (20/6) y revisión con la Comisión (22/6/2026). Las observaciones se incorporaron al cierre del MVP (28–29/6) y la versión validada se presentó el 3/7/2026.</td></tr>
+          <tr><td>0.2</td><td>07/2026</td><td>Equipo de desarrollo con la Comisión Directiva</td><td>Validación del mockup: entrevista inicial (16/6), armado del mockup v1 (18/6 al 22/6) y revisión con la Comisión (22/6/2026). Las observaciones se incorporaron en el mockup v2 (23/6 al 27/6), el MVP se cerró el 28 y 29/6 y la versión validada se presentó el 3/7/2026.</td></tr>
           <tr><td>0.3</td><td>08/2026</td><td>Equipo de desarrollo</td><td>Entrega de la versión Beta a la Comisión (1–11/8/2026).</td></tr>
           <tr><td>1.0</td><td>08/2026</td><td>Laborde Santiago</td><td>Versión inicial. Propósito, alcance, personal involucrado, definiciones, referencias y resumen ejecutivo del sistema.</td></tr>
           <tr><td>1.1</td><td>08/2026</td><td>Laborde Santiago</td><td>Incorporación de la sección 3, Descripción General. Reorganización de la primera sección bajo el apartado 2, Introducción, y alta del presente registro de control de cambios.</td></tr>
@@ -556,7 +557,7 @@ a:hover { color: var(--dorado); }
             <td>1.5</td><td>10/2026</td><td>Laborde Santiago</td><td>Actualización integral según el sistema entregado a la Comisión para la etapa de carga y prueba. Nuevos módulos: permisos por módulo y administradores, categorías de socios, exportación a Excel, recordatorio automático de cuota, consultas como conversación, asistencia a eventos por QR, encuestas anónimas, datos del club editables (contacto, actividades, formas de pago, cargos), pantalla de la Comisión automática y limpieza de datos de prueba. "Finanzas" pasa a llamarse "Ingreso cuotas". Integración con Mercado Pago (Checkout Pro) implementada. QR del carnet firmado por el servidor y carnet descargable sin estado de cuota. Envío de mails desactivado en esta etapa. Modelo de datos ampliado de 17 a 26 tablas. Nuevos requerimientos RF-23 a RF-33. Actualización de la guía de inicio rápido, el manual de uso y las preguntas frecuentes.</td></tr>
           <tr><td>1.5.1</td><td>10/2026</td><td>Equipo de desarrollo con la Comisión Directiva</td><td>Devolución del Alfa (entregado el 17/9/2026, devolución el 20/10/2026). Cambios incorporados a pedido de la Comisión: listado de socios con desplazamiento completo, datos del club editables desde la app (contacto, actividades, formas de pago y cargos), actividades en texto libre, textos institucionales fijos, botones con mejor contraste, pantalla de la Comisión actualizada automáticamente y envío de mails desactivado hasta definir la casilla del club.</td></tr>
           <tr>
-            <td>1.6</td><td>10/2026</td><td>Laborde Santiago</td><td>Estimación económica actualizada según la planilla del equipo: 473 horas, costo de US$ 9.862,52, margen del 25 % y precio de venta de US$ 12.328,15, con seña del 30 % y saldo contra entrega (2.6, 7 y 8.4). Sección 5 reestructurada según el modelo de la cátedra: GANTT por etapas con horas completadas según la planilla (84 h al 28/10/2026) y Carta Gantt embebida en vivo en modo solo lectura (5.1). Planilla de estimación (7.1.1) actualizada con los valores vigentes, en lugar de la captura con errores e infraestructura administrativa con roles, equipo y herramientas (5.2). Correspondencia entre las etapas del Gantt y las del resumen ejecutivo. Reprogramación de la entrega definitiva de septiembre de 2026 al 2 de noviembre de 2026; la garantía corre desde la firma del acta de entrega definitiva (8.3 y 8.8). Diagnóstico completo: problema central, causas, efectos, objetivo, fines y trazabilidad medio → requerimientos. RF-19 reclasificado a prioridad Media por depender del envío de mails y contar con procedimiento alternativo. Nombre "Ingreso cuotas" aplicado en todo el documento y destinos de comunicados alineados con el sistema (sin destino "Comisión"; los socios escriben a la Comisión por Consultas). Modelo ER completado: <code>cuotas.registrado_por</code>, relaciones de quién registra cobros y reservas, relación lógica <code>espacios_reserva</code> → <code>reservas</code> y <code>reservas</code> → <code>mp_pagos</code>, y excepciones a la 1FN y 3FN documentadas. Equipamiento e insumos de 6.2 y 6.3 aclarados como opcionales y fuera del precio. Corrección de la descripción del token de sesión (con estado, validado contra <code>sesiones</code>). Numeración: el Diagnóstico pasa a 2.7 y la imagen 7.1.1 se ubica después de 7.1. El manual de uso y las preguntas frecuentes pasan a un documento aparte (ver 2.5). Incorporación de los OKR con su base (2.6), de las validaciones con el cliente (sección 1), del control de versiones en GitHub (4.5 y 8.6) y del valor hora por categoría profesional (7.2).</td>
+            <td>1.6</td><td>10/2026</td><td>Laborde Santiago</td><td>Estimación económica actualizada según la planilla del equipo: 473 horas, costo de US$ 9.862,52 y valor estimado de US$ 12.328,15. Precio acordado con el club: US$ 1.300, con anticipo del 30 % (US$ 390) ya recibido y saldo de US$ 910 contra entrega (2.6, 7 y 8.4). Fechas alineadas con la Carta Gantt, incluidas las correcciones del mockup (23/6 al 27/6). Sección 5 reestructurada según el modelo de la cátedra: GANTT por etapas y Carta Gantt embebida en vivo en modo solo lectura (5.1). Planilla de estimación (7.1.1) actualizada con los valores vigentes, en lugar de la captura con errores e infraestructura administrativa con roles, equipo y herramientas (5.2). Correspondencia entre las etapas del Gantt y las del resumen ejecutivo. Reprogramación de la entrega definitiva de septiembre de 2026 al 2 de noviembre de 2026; la garantía corre desde la firma del acta de entrega definitiva (8.3 y 8.8). Diagnóstico completo: problema central, causas, efectos, objetivo, fines y trazabilidad medio → requerimientos. RF-19 reclasificado a prioridad Media por depender del envío de mails y contar con procedimiento alternativo. Nombre "Ingreso cuotas" aplicado en todo el documento y destinos de comunicados alineados con el sistema (sin destino "Comisión"; los socios escriben a la Comisión por Consultas). Modelo ER completado: <code>cuotas.registrado_por</code>, relaciones de quién registra cobros y reservas, relación lógica <code>espacios_reserva</code> → <code>reservas</code> y <code>reservas</code> → <code>mp_pagos</code>, y excepciones a la 1FN y 3FN documentadas. Equipamiento e insumos de 6.2 y 6.3 aclarados como opcionales y fuera del precio. Corrección de la descripción del token de sesión (con estado, validado contra <code>sesiones</code>). Numeración: el Diagnóstico pasa a 2.7 y la imagen 7.1.1 se ubica después de 7.1. El manual de uso y las preguntas frecuentes pasan a un documento aparte (ver 2.5). Incorporación de los OKR con su base (2.6), de las validaciones con el cliente (sección 1), del control de versiones en GitHub (4.5 y 8.6) y del valor hora por categoría profesional (7.2).</td>
           </tr>
         </tbody>
       </table>
@@ -570,7 +571,7 @@ a:hover { color: var(--dorado); }
         <tbody>
           <tr><td>24/4 y 30/4/2026</td><td>Entrevistas de relevamiento</td><td>Necesidades del club identificadas; base del diagnóstico (2.7).</td></tr>
           <tr><td>8/5/2026</td><td>Presentación del proyecto</td><td>Idea del proyecto aprobada para pasar al mockup.</td></tr>
-          <tr><td>16/6 y 22/6/2026</td><td>Entrevista y revisión del mockup v1</td><td>Observaciones de la Comisión incorporadas al cierre del MVP (28–29/6).</td></tr>
+          <tr><td>16/6 y 22/6/2026</td><td>Entrevista y revisión del mockup v1</td><td>Observaciones de la Comisión incorporadas en el mockup v2 (23/6 al 27/6) y cierre del MVP (28 y 29/6).</td></tr>
           <tr><td>3/7/2026</td><td>2da presentación (MVP)</td><td>Mockup validado como base del desarrollo.</td></tr>
           <tr><td>1–11/8/2026</td><td>Entrega Beta</td><td>Primera versión funcional en uso por la Comisión.</td></tr>
           <tr><td>17/9 → 20/10/2026</td><td>Pruebas y devolución del Alfa</td><td>Pedidos de cambio registrados en la versión 1.5.1 y corregidos del 21/10 al 30/10.</td></tr>
@@ -812,9 +813,9 @@ a:hover { color: var(--dorado); }
       <table>
         <thead><tr><th>Concepto</th><th>Importe</th></tr></thead>
         <tbody>
-          <tr><td>Precio de venta (costo US$ 9.862,52 + margen del 25 %)</td><td><strong>US$ 12.328,15</strong></td></tr>
-          <tr><td>Seña (30 %)</td><td>US$ 3.698,45</td></tr>
-          <tr><td><strong>Saldo contra entrega definitiva (70 %)</strong></td><td><strong>US$ 8.629,70</strong></td></tr>
+          <tr><td>Precio acordado con el club</td><td><strong>US$ 1.300</strong></td></tr>
+          <tr><td>Anticipo recibido (30 %)</td><td>US$ 390</td></tr>
+          <tr><td><strong>Saldo contra entrega definitiva (70 %)</strong></td><td><strong>US$ 910</strong></td></tr>
         </tbody>
       </table>
     </div>
@@ -1260,15 +1261,14 @@ a:hover { color: var(--dorado); }
     <h2 class="sec-titulo"><span class="num">5</span>Oferta de Gestión</h2>
 
     <h3 class="sub-titulo" id="s5-1">5.1 GANTT</h3>
-    <p>Cronograma de tareas, responsables y duración estimada, organizado por las etapas del proyecto (E01 a E03). El GANTT se lleva en una planilla de cálculo (Google Sheets) y se actualiza a medida que avanza el proyecto. El proyecto comenzó el 20 de abril de 2026; la entrega definitiva y el cierre formal son el <strong>2 de noviembre de 2026</strong>. Al 28 de octubre la planilla registra <strong>84 horas completadas</strong>. Las 473 horas de la sección 7 son la estimación de esfuerzo con la que se fijó el precio.</p>
+    <p>Cronograma de tareas, responsables y duración estimada, organizado por las etapas del proyecto (E01 a E03). El GANTT se lleva en una planilla de cálculo (Google Sheets) y se actualiza a medida que avanza el proyecto. El proyecto comenzó el 20 de abril de 2026; la entrega definitiva y el cierre formal son el <strong>2 de noviembre de 2026</strong>. Las horas de cada tarea se ven en la Carta Gantt en vivo, debajo; la estimación de esfuerzo total es de 473 horas (sección 7).</p>
     <div class="tabla-wrap">
       <table>
-        <thead><tr><th>Etapa</th><th>Tareas principales</th><th>Entregable</th><th>Hs completadas</th></tr></thead>
+        <thead><tr><th>Etapa</th><th>Tareas principales</th><th>Entregable</th></tr></thead>
         <tbody>
-          <tr><td><strong>E01</strong></td><td>Definición del proyecto (22/4 → 8/5): análisis de mercado, armado de la entrevista, dos entrevistas con la Comisión Directiva (24/4 y 30/4), análisis de resultados, definición de la idea y presentación.</td><td>Problema y propuesta del proyecto presentados (8/5).</td><td>21</td></tr>
-          <tr><td><strong>E02</strong></td><td>Mockup (16/6 → 3/7): entrevista con el cliente para el mockup, armado del mockup v1, revisión con la Comisión, análisis de las observaciones, cierre del MVP y segunda presentación.</td><td>Mockup validado con la Comisión + MVP (3/7).</td><td>14</td></tr>
-          <tr><td><strong>E03</strong></td><td>Proyecto Alfa (1/8 → 2/11): entrega Beta, integración con Mercado Pago, módulo Ingreso cuotas, QR de socios, entrega Alfa para pruebas (17/9), devolución de la Comisión (20/10), correcciones, contratos y entrega final.</td><td>Sistema funcionando + documentación completa + acta de entrega (2/11).</td><td>35</td></tr>
-          <tr><td colspan="3"><strong>Total de horas completadas según la Carta Gantt</strong> (al 28/10/2026, de 386 estimadas; incluye 14 h cargadas en filas de la planilla posteriores a E03)</td><td><strong>84</strong></td></tr>
+          <tr><td><strong>E01</strong></td><td>Definición del proyecto (22/4 → 8/5): análisis de mercado, armado de la entrevista, dos entrevistas con la Comisión Directiva (24/4 y 30/4), análisis de resultados, definición de la idea y presentación.</td><td>Problema y propuesta del proyecto presentados (8/5).</td></tr>
+          <tr><td><strong>E02</strong></td><td>Mockup (16/6 → 3/7): entrevista con el cliente para el mockup, armado del mockup v1 (18/6 → 22/6), revisión con la Comisión (22/6), correcciones del mockup v2 (23/6 → 27/6), cierre del MVP (28/6 → 29/6) y segunda presentación (3/7).</td><td>Mockup validado con la Comisión + MVP (3/7).</td></tr>
+          <tr><td><strong>E03</strong></td><td>Proyecto Alfa (1/8 → 2/11): entrega Beta, integración con Mercado Pago, módulo Ingreso cuotas, QR de socios, entrega Alfa para pruebas (17/9), devolución de la Comisión (20/10), correcciones, contratos y entrega final.</td><td>Sistema funcionando + documentación completa + acta de entrega (2/11).</td></tr>
         </tbody>
       </table>
     </div>
@@ -1389,14 +1389,16 @@ a:hover { color: var(--dorado); }
           <tr><td>Costos varios</td><td>Herramienta de IA y entrega de productos, con 7 % de contingencia.</td><td>US$ 161,57</td></tr>
           <tr><td><strong>Costo total</strong></td><td></td><td><strong>US$ 9.862,52</strong></td></tr>
           <tr><td>Margen</td><td>25 % sobre el costo total.</td><td>US$ 2.465,63</td></tr>
-          <tr><td><strong>Precio de venta</strong></td><td></td><td><strong>US$ 12.328,15</strong></td></tr>
+          <tr><td>Valor estimado del trabajo</td><td>Costo total más margen.</td><td>US$ 12.328,15</td></tr>
+          <tr><td>Bonificación al club</td><td>Diferencia entre el valor estimado y el precio acordado.</td><td>− US$ 11.028,15</td></tr>
+          <tr><td><strong>Precio acordado</strong></td><td></td><td><strong>US$ 1.300</strong></td></tr>
         </tbody>
       </table>
     </div>
-    <p>Todos los importes de esta sección están expresados en dólares estadounidenses (US$). El costo promedio de la hora de trabajo es de <strong>US$ 20,51</strong> (US$ 9.700,95 / 473 horas) y el precio de venta equivale a <strong>US$ 26,06</strong> por hora. El costo de cada categoría profesional se detalla en 7.2.</p>
+    <p>Todos los importes de esta sección están expresados en dólares estadounidenses (US$). El costo promedio de la hora de trabajo es de <strong>US$ 20,51</strong> (US$ 9.700,95 / 473 horas). El precio acordado con el Centro Molisano Monforte es de <strong>US$ 1.300</strong>: la diferencia con el valor estimado se bonifica por tratarse de un proyecto académico desarrollado para una asociación civil sin fines de lucro. El costo de cada categoría profesional se detalla en 7.2.</p>
 
     <h3 class="sub-titulo">7.1.1 Planilla de estimación — situación actual</h3>
-    <p>Planilla de estimación económica del equipo con los valores vigentes del proyecto (octubre de 2026). El precio de venta surge de aplicar el margen del 25 % al costo total.</p>
+    <p>Planilla de estimación económica del equipo con los valores vigentes del proyecto (octubre de 2026). El valor estimado surge de aplicar el margen del 25 % al costo total; el precio que se cobra al club es el acordado (7.1).</p>
     <div class="est-sheet">
       <div class="est-head"><span>Estimación económica</span><span>Sistema de Gestión Digital de Socios</span></div>
       <div class="est-meta">
@@ -1404,7 +1406,8 @@ a:hover { color: var(--dorado); }
         <div><b>Director</b>Claudio Patriarca</div>
         <div><b>Fecha de inicio</b>20/04/2026</div>
         <div><b>Fecha de fin</b>02/11/2026</div>
-        <div><b>Precio de venta</b>US$ 12.328,15</div>
+        <div><b>Valor estimado</b>US$ 12.328,15</div>
+        <div><b>Precio acordado</b>US$ 1.300</div>
         <div><b>Esfuerzo</b>473 horas</div>
         <div><b>Margen</b>25 %</div>
       </div>
@@ -1461,9 +1464,9 @@ a:hover { color: var(--dorado); }
       <table>
         <thead><tr><th>Concepto</th><th>Importe</th></tr></thead>
         <tbody>
-          <tr><td>Precio de venta (costo US$ 9.862,52 + margen del 25 %)</td><td><strong>US$ 12.328,15</strong></td></tr>
-          <tr><td>Seña (30 %)</td><td>US$ 3.698,45</td></tr>
-          <tr><td><strong>Saldo contra entrega definitiva (70 %)</strong></td><td><strong>US$ 8.629,70</strong></td></tr>
+          <tr><td>Precio acordado con el club</td><td><strong>US$ 1.300</strong></td></tr>
+          <tr><td>Anticipo recibido (30 %)</td><td>US$ 390</td></tr>
+          <tr><td><strong>Saldo contra entrega definitiva (70 %)</strong></td><td><strong>US$ 910</strong></td></tr>
         </tbody>
       </table>
     </div>
@@ -1497,7 +1500,7 @@ a:hover { color: var(--dorado); }
     <p>Las etapas 01 y 02 de la Carta Gantt están concluidas. La etapa 03 (Proyecto Alfa) está en devolución y correcciones, con el sistema en funcionamiento en etapa de carga y prueba por parte de la Comisión Directiva. La entrega definitiva, prevista originalmente para septiembre de 2026, se reprograma para el <strong>2 de noviembre de 2026</strong>, fecha que coincide con el cierre formal del proyecto. La entrega definitiva se formaliza con la firma de un acta de entrega entre las partes.</p>
 
     <h3 class="sub-titulo">8.4 Precio y forma de pago</h3>
-    <p>El precio total asciende a <strong>doce mil trescientos veintiocho dólares estadounidenses con quince centavos (US$ 12.328,15)</strong>, pagadero según lo establecido en el apartado 7.3: una seña del 30 % (US$ 3.698,45) y un saldo de <strong>US$ 8.629,70</strong> contra la firma del acta de entrega definitiva. La mora en el pago del saldo faculta al Proveedor a suspender las tareas de mantenimiento hasta su regularización.</p>
+    <p>El precio total asciende a <strong>mil trescientos dólares estadounidenses (US$ 1.300)</strong>, pagadero según lo establecido en el apartado 7.3: un anticipo del 30 % (US$ 390), ya abonado, y un saldo de <strong>US$ 910</strong> contra la firma del acta de entrega definitiva. La mora en el pago del saldo faculta al Proveedor a suspender las tareas de mantenimiento hasta su regularización.</p>
 
     <h3 class="sub-titulo">8.5 Obligaciones del Comitente</h3>
     <ul>
